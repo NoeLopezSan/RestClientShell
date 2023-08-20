@@ -77,4 +77,13 @@ public final class HttpAPIHandler {
                 .getEncoder()
                 .encodeToString((username+":"+password).getBytes());
     }
+
+    public void updateCustomer(CustomerResponse customer) {
+        restClient.put()
+                .uri("/{id}",customer.id())
+                .accept(MediaType.APPLICATION_JSON)
+                .body(customer)
+                .retrieve()
+                .toBodilessEntity();
+    }
 }

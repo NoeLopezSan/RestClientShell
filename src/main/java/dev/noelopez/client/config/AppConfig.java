@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.shell.Availability;
 import org.springframework.shell.AvailabilityProvider;
+import org.springframework.shell.result.CommandNotFoundMessageProvider;
 
 @Configuration
 public class AppConfig {
@@ -43,5 +44,9 @@ public class AppConfig {
                 ? Availability.available()
                 : Availability.unavailable("You are not logged in.");
     }
-}
 
+    @Bean
+    CommandNotFoundMessageProvider provider() {
+        return ctx -> "The command was not found "+ctx.text();
+    }
+}

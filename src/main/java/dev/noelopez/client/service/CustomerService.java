@@ -24,8 +24,11 @@ public class CustomerService {
         return httpAPIHandler.findCustomers(status, vip);
     }
 
+    public void updateCustomer(CustomerResponse customer) {
+        httpAPIHandler.updateCustomer(customer);
+    }
+
     public void deleteCustomer(Long id) {
         httpAPIHandler.deleteCustomer(id);
     }
-
 }
