@@ -40,7 +40,7 @@ public class CustomerCommands {
         return ouputFormatter.coverToTable(customers);
     }
 
-    @Command(command = "update-customer", description = "Updates Customer attributes by Id.")
+    @Command(command = "update-customer", description = "Updates Customer fields. It requires user login.")
     @CommandAvailability(provider = "userLoggedProvider")
     public String updateCustomer(@Option(label = "id", required = true, longNames = "id", shortNames = 'i') Long id) {
         CustomerResponse customer = customerService.findCustomer(id);
@@ -60,7 +60,7 @@ public class CustomerCommands {
         return String.format("Customer %d updated successfully. \n %s", id, ouputFormatter.coverToTable(customer));
     }
 
-    @Command(command = "delete-customer", description = "Delete Customer By Id. It requires a password token.")
+    @Command(command = "delete-customer", description = "Delete Customer By Id. It requires user login.")
     @CommandAvailability(provider = "userLoggedProvider")
     public String deleteCustomer(
         @Range(min = 1, max = 9999, message = "Customer id must be between {min} and {max}.")

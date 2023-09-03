@@ -7,11 +7,14 @@ import dev.noelopez.client.format.OuputFormatter;
 import dev.noelopez.client.resolver.CLIExceptionResolver;
 import dev.noelopez.client.service.LoginService;
 import org.jline.reader.LineReader;
+import org.jline.utils.AttributedString;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.shell.Availability;
 import org.springframework.shell.AvailabilityProvider;
+import org.springframework.shell.jline.PromptProvider;
+import org.springframework.shell.result.CommandNotFoundMessageProvider;
 
 @Configuration
 public class AppConfig {
@@ -54,17 +57,19 @@ public class AppConfig {
                 ? Availability.available()
                 : Availability.unavailable("You are not logged in.");
     }
-//    @Bean
-//    CommandNotFoundMessageProvider provider() {
-//        return ctx -> "The command was not found "+ctx.text();
-//    }
+    @Bean
+    CommandNotFoundMessageProvider provider() {
+        var message = """
+               The command '%s' you entered was not found. 
+               Use help to view the list of available commands 
+               """;
+        return ctx -> String.format(message, ctx.text());
+    }
 
-//    @Bean
-//    PromptProvider promptProvider() {
-//        return () -> loginService.isLoggedIn() ?
-//                new AttributedString(loginService.getLoggedUser().get().username()+">",
-//                AttributedStyle.BOLD.foreground(AttributedStyle.YELLOW)) :
-//                new AttributedString("customer-shell>",
-//                        AttributedStyle.BOLD.foreground(AttributedStyle.YELLOW));
-//    }
+    @Bean
+    PromptProvider promptProvider() {
+        return () -> loginService.isLoggedIn() ?
+                new AttributedString("shell("+loginService.getUser().username()+"):>") :
+                new AttributedString("shell(unknown):>");
+    }
 }

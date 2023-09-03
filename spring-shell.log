@@ -212,3 +212,27 @@
 1693688958966:login sdsd dssddsd
 1693690306415:login asas asasas
 1693690310918:help
+1693700729791:delete-customer 2
+1693700957174:login administrator1 password2
+1693700966870:exit
+1693701082278:login administrator password02
+1693701118909:login administrator password021
+1693701125554:login administrator password021dfdfdfd
+1693701139813:login administrator password021dssssssssssssssssssssssssssssssssssssssssss dsssssssssssssssssss
+1693701148981:login administrator password021dssssssssssssssssssssssssssssssssssssssssss dsssssssssssssssssss fvdddddddddddddddddddddddddd
+1693701297742:login administrator1 password02
+1693701372936:delete-customer 2
+1693701459493:login administrator1 password02
+1693701476456:delete-customer 2
+1693701489728:find-customer 2
+1693701595439:help
+1693701666117:login
+1693701742220:logout
+1693702217813:save-command
+1693703548218:login administrator1 password02
+1693704005527:login admnistrator1 password02
+1693704017157:logout
+1693704033046:login admnistrator1 password02
+1693704045120:find-customer 2
+1693704059226:delete-customer 5
+1693704065174:logout

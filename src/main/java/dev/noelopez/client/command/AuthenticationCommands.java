@@ -17,7 +17,8 @@ public class AuthenticationCommands {
     @CommandAvailability(provider = "userLoggedOutProvider")
     public String login(
         @Size(min = 8, max = 20, message = "Username must be between {min} and {max} ") @Option(required = true) String username,
-        @Min(value = 10, message = "Password must be at least {value} chars long") @Option(required = true) String password) {
+        @Size(min = 10, message = "Password must be at least {min} chars long")
+        @Option(required = true) String password) {
         loginService.login(username,password);
         return "You are logged in now!";
     }

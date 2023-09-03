@@ -34,4 +34,8 @@ public class LoginService {
     public boolean isLoggedIn() {
         return Objects.nonNull(user.get());
     }
+
+    public SimpleUser getUser() {
+        return user.get();
+    }
 }
