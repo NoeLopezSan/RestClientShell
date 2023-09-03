@@ -1,34 +1,31 @@
 package dev.noelopez.client.command;
 
-import dev.noelopez.client.config.SimpleUser;
-import dev.noelopez.client.config.UserLoggedIn;
+import dev.noelopez.client.service.LoginService;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import org.springframework.shell.command.annotation.Command;
 import org.springframework.shell.command.annotation.CommandAvailability;
 import org.springframework.shell.command.annotation.Option;
 
-@Command(group = "Authenticate Commands")
+@Command(group = "Login Commands")
 public class AuthenticationCommands {
-    private UserLoggedIn userLoggedIn;
-    public AuthenticationCommands(UserLoggedIn userLoggedIn) {
-        this.userLoggedIn = userLoggedIn;
-    }
-    SimpleUser getAdminUser() {
-        return new SimpleUser("admin","12345");
+    private LoginService loginService;
+    public AuthenticationCommands(LoginService loginService) {
+        this.loginService = loginService;
     }
     @Command(command="login",description="Login to get Admin privileges.")
-    @CommandAvailability(provider = "userNotLoggedInAvailability")
-    public String login(@Option(required = true) String user, @Option(required = true) String password) {
-        if (!getAdminUser().equals(new SimpleUser(user,password)))
-            return "Incorrect username/password.";
-
-        userLoggedIn.setLoggedIn(true);
+    @CommandAvailability(provider = "userLoggedOutProvider")
+    public String login(
+        @Size(min = 8, max = 20, message = "Username must be between {min} and {max} ") @Option(required = true) String username,
+        @Min(value = 10, message = "Password must be at least {value} chars long") @Option(required = true) String password) {
+        loginService.login(username,password);
         return "You are logged in now!";
     }
 
-    @Command(command="logout",description="logout as an Admin.", group = "Authenticate Commands")
-    @CommandAvailability(provider = "userLoggedInAvailability")
+    @Command(command="logout",description="logout as an Admin.")
+    @CommandAvailability(provider = "userLoggedProvider")
     public String logout() {
-        userLoggedIn.setLoggedIn(false);
+        loginService.logout();
         return "You have been logged out.";
     }
 }

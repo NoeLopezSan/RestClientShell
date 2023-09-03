@@ -1,6 +1,7 @@
 package dev.noelopez.client.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import dev.noelopez.client.dto.CustomerRequest;
 import dev.noelopez.client.dto.CustomerResponse;
 import dev.noelopez.client.dto.CustomerStatus;
 import dev.noelopez.client.service.api.HttpAPIHandler;
@@ -24,8 +25,8 @@ public class CustomerService {
         return httpAPIHandler.findCustomers(status, vip);
     }
 
-    public void updateCustomer(CustomerResponse customer) {
-        httpAPIHandler.updateCustomer(customer);
+    public CustomerResponse updateCustomer(Long id, CustomerRequest customerRequest) {
+        return httpAPIHandler.updateCustomer(id, customerRequest);
     }
 
     public void deleteCustomer(Long id) {

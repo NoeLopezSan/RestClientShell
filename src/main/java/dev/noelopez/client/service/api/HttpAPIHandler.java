@@ -3,6 +3,7 @@ package dev.noelopez.client.service.api;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.noelopez.client.config.APIProperties;
+import dev.noelopez.client.dto.CustomerRequest;
 import dev.noelopez.client.dto.CustomerResponse;
 import dev.noelopez.client.dto.CustomerStatus;
 import dev.noelopez.client.exception.ErrorDetails;
@@ -78,12 +79,12 @@ public final class HttpAPIHandler {
                 .encodeToString((username+":"+password).getBytes());
     }
 
-    public void updateCustomer(CustomerResponse customer) {
-        restClient.put()
-                .uri("/{id}",customer.id())
+    public CustomerResponse updateCustomer(Long id, CustomerRequest customerRequest) {
+        return restClient.put()
+                .uri("/{id}",id)
                 .accept(MediaType.APPLICATION_JSON)
-                .body(customer)
+                .body(customerRequest)
                 .retrieve()
-                .toBodilessEntity();
+                .body(CustomerResponse.class);
     }
 }
