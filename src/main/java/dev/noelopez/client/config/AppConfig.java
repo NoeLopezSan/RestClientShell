@@ -60,8 +60,8 @@ public class AppConfig {
     @Bean
     CommandNotFoundMessageProvider provider() {
         var message = """
-               The command '%s' you entered was not found. 
-               Use help to view the list of available commands 
+               The command '%s' you entered was not found.
+               Use help to view the list of available commands
                """;
         return ctx -> String.format(message, ctx.text());
     }

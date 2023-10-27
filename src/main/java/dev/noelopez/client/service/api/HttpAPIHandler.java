@@ -6,6 +6,7 @@ import dev.noelopez.client.config.APIProperties;
 import dev.noelopez.client.dto.CustomerRequest;
 import dev.noelopez.client.dto.CustomerResponse;
 import dev.noelopez.client.dto.CustomerStatus;
+import dev.noelopez.client.dto.CustomerUpdateRequest;
 import dev.noelopez.client.exception.ErrorDetails;
 import dev.noelopez.client.exception.RestClientCustomException;
 import org.springframework.http.HttpHeaders;
@@ -47,23 +48,25 @@ public final class HttpAPIHandler {
                 .body(CustomerResponse.class);
     }
 
-    public List<CustomerResponse> findCustomers(CustomerStatus status, Boolean vip) throws JsonProcessingException {
+    public List<CustomerResponse> findCustomers(CustomerRequest customerRequest) throws JsonProcessingException {
         String response = restClient.get()
-                .uri(getQueryString(status, vip))
+                .uri(getQueryString(customerRequest))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .body(String.class);
         return Arrays.stream(objectMapper.readValue(response, CustomerResponse[].class)).toList();
     }
 
-    private static String getQueryString(CustomerStatus status, Boolean vip) {
+    private static String getQueryString(CustomerRequest customerRequest) {
         String queryString = "?";
 
-        if (status != null)
-            queryString += "status="+ status.toString();
-        if (vip != null)
-            queryString += (queryString.isEmpty() ? "&" : "") +"vip="+ vip.toString();
-        return queryString;
+        if (customerRequest.status() != null)
+            queryString += "status="+ customerRequest.status().toString();
+        if (customerRequest.personInfo().name() != null)
+            queryString += (queryString.length() > 1 ? "&" : "") + "name="+ customerRequest.personInfo().name().toString();
+        if (customerRequest.detailsInfo().vip() != null)
+            queryString += (queryString.length() > 1 ? "&" : "") +"vip="+ customerRequest.detailsInfo().vip().toString();
+        return queryString.length() > 1 ? queryString: "";
     }
 
     public void deleteCustomer(Long id) {
@@ -79,7 +82,7 @@ public final class HttpAPIHandler {
                 .encodeToString((username+":"+password).getBytes());
     }
 
-    public CustomerResponse updateCustomer(Long id, CustomerRequest customerRequest) {
+    public CustomerResponse updateCustomer(Long id, CustomerUpdateRequest customerRequest) {
         return restClient.put()
                 .uri("/{id}",id)
                 .accept(MediaType.APPLICATION_JSON)

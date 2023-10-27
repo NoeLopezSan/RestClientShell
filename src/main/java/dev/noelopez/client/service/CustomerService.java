@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import dev.noelopez.client.dto.CustomerRequest;
 import dev.noelopez.client.dto.CustomerResponse;
 import dev.noelopez.client.dto.CustomerStatus;
+import dev.noelopez.client.dto.CustomerUpdateRequest;
 import dev.noelopez.client.service.api.HttpAPIHandler;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +22,11 @@ public class CustomerService {
         return httpAPIHandler.findCustomer(id);
     }
 
-    public List<CustomerResponse> findCustomers(CustomerStatus status, Boolean vip) throws JsonProcessingException {
-        return httpAPIHandler.findCustomers(status, vip);
+    public List<CustomerResponse> findCustomers(CustomerRequest customerRequest) throws JsonProcessingException {
+        return httpAPIHandler.findCustomers(customerRequest);
     }
 
-    public CustomerResponse updateCustomer(Long id, CustomerRequest customerRequest) {
+    public CustomerResponse updateCustomer(Long id, CustomerUpdateRequest customerRequest) {
         return httpAPIHandler.updateCustomer(id, customerRequest);
     }
 

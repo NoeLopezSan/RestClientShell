@@ -236,3 +236,291 @@
 1693704045120:find-customer 2
 1693704059226:delete-customer 5
 1693704065174:logout
+1694264644648:find-customer 45
+1694264877265:help
+1694268677926:find-customer 3
+1694269065438:help
+1694269168557:find-customers --v true
+1694269176517:find-customers -v true
+1694269198604:find-customers --vip true
+1694269617376:find-customers -s ACTIVATED
+1694269718633:find-customer 44444
+1694269733301:find-customer 1000
+1694269925145:find-customer ewewewew
+1694269994686:find-customer sdsadasa
+1694270017970:find-customer 1111
+1694270880152:help
+1694270889928:find-customer 2
+1694270899927:update-customer 2
+1694270926647:John Smith
+1694270937961:john.smith@company.com
+1694270958494:10/05/1987
+1694270966566:new customer
+1694270970668:f
+1694270978502:N
+1694270998494:find-customer 2
+1694271678191:help
+1694271701348:update-customer 3
+1694271729550:login admnistrator1 password3
+1694271744831:login admnistrator1 password03
+1694271750079:login admnistrator1 password02
+1694271758547:help
+1694271792245:delete-customer 2
+1694271805395:find-customer 2
+1694271902125:find-customer 111111111
+1694272002443:find-cofdsfsd
+1694272171902:find-customer 3
+1694272185988:login adminstrator1 password02
+1694272195899:dsfsdfdsf
+1694272284699:exit
+1694381173722:find-customer 2
+1694387927881:find-customers
+1694387951234:find-customers -v true
+1694635411351:find-customer 3
+1694635780044:find-customers
+1694636327341:find-customers -v true -s ACTIVATED
+1694636379867:find-customers --v true --s ACTIVATED
+1694636453420:find-customers -v true -s ACTIVATED
+1694812589154:exit
+1694812601475:find-customers -v true -s ACTIVATED
+1694813068826:find-customers -v true
+1694814411394:find-customers
+1694816399484:ind-customers
+1694816423405:find-customers
+1695632771151:find-customers -s ACTIVATED
+1695633276408:shell(unknown):>x
+1695633297908:find-customers -s DEACTIVATED
+1695633336126:shell(unknown):>x
+1695634425718:find-customers -s DEACTIVATED -n "name 4"
+1695652355338:find-customers -n "name 4"
+1695653070490:find-customers -n "name 5"
+1695653174550:find-customers  -n "name 5" -s ACTIVATED
+1695653261173:find-customers  -n "name 5"
+1695653296872:find-customers  -n "name 5" -s ACTIVATED
+1695653987506:find-customers  -n "name 5"
+1695654393188:find-customers  -n "name 5" -v true
+1695655049475:find-customers  -n "name 5" -v false
+1695655099422:find-customers  -n "name 5" -v true
+1695655109969:find-customers  -n "name 5" -v false
+1695655116720:find-customers  -n "name 5" -v true
+1695655124295:find-customer 1
+1695655148298:find-customer 11
+1695720614871:shell(unknown):>
+1695720623923:find-customer 10
+1695720709711:find-customers -n "asdfghjkl"
+1695720736182:find-customers -n "asdfgh"
+1695720902344:find-customer 333
+1695721139585:find-customer 33
+1695721152142:find-customer 333
+1695721399855:find-customers
+1695722455704:find-customers -n "name 5"
+1695722509882:find-customer 333
+1695722767798:find-customer 33
+1695722944818:find-customers -n "name 521212121"
+1695723165124:find-customer 333
+1695823258291:find-customer 2
+1696713170093:find-customer 1
+1696714722362:find-customer 2
+1696714841389:shell(unknown):>
+1696714848440:find-customer 2
+1696714865917:find-customer 1
+1696715207962:find-customer 2
+1696715212906:find-customer 1
+1696715218351:find-customer 2
+1696715403850:find-customer 1
+1696715419228:find-customer 2
+1696715593047:find-customers -v true
+1696715645558:find-customers -v true -s ACTIVATED
+1696716045255:history
+1696716063973:find-customers -v true -s ACTIVATED -n sddsfdfds
+1696717145936:find-customer 2
+1696717171278:update-customer
+1696717177907:help
+1696717195543:login user1 password02
+1696717211765:login administrator1 password02
+1696717218987:update-customer
+1696717227764:update-customer 2
+1696717253712:Noe
+1696717264219:noe@gmail.com
+1696717274880:01/02/2002
+1696717279117:fdfd fsdfdsgsdg fgfgfgfdg
+1696717291848:Y
+1696717341303:find-customer 2
+1696717369103:update-customer 4
+1696717375443:sdfdsfdsfdsfdf
+1696717379473:dfsd@sdsadsad.com
+1696717389798:01/05/1989
+1696717392417:sdfdf jkdfdgkfhg fhgfdgfg
+1696717400725:Y
+1696717411136:find-customer 4
+1696762592513:find-customers
+1696763039805:find-customers -v true
+1696763048580:find-customers
+1696763076168:find-customers -s ACTIVATED
+1696763110904:find-customers s DEACTIVATED
+1696763118875:find-customers
+1696763134153:find-customers -v fdfdsf
+1696763157328:find-customers -n name
+1696763185495:find-customers -n name 4
+1696763238700:find-customers -n "name 4" -v false
+1696767778533:find-customers
+1696767796498:find-customers -v true
+1696767853254:find-customers
+1696768257077:finc-customers
+1696768265424:find-customers
+1696768275702:find-customer 1
+1696768285044:find-customer
+1696768289673:find-customer 1
+1696768293820:find-custome
+1696768297075:find-customers
+1696768309245:find-customer 1
+1696768315101:find-customers
+1696768457413:@Scheduled(fixedRate = Timer.ONE_HOUR)
+1696768463230:find-customers
+1696768471682:@Scheduled(fixedRate = Timer.ONE_HOUR)
+1696768476865:find-customer 1
+1696768551798:find-customer 11
+1696768557018:find-customer 12
+1696768566527:find-customer 11
+1696768569574:find-customer 1
+1696769168828:find-customers
+1696769315575:find-customer 1
+1696769320189:find-customers
+1696772060356:find-customer 1
+1696772065732:find-customers1
+1696772073110:find-customer 2
+1696772078019:find-customer 3
+1696772082367:find-customers
+1696772088375:find-customers -v true
+1696772509179:find-customer 1
+1696772519514:find-customer 2
+1696772521771:find-customer 12
+1696772524023:find-customer 3
+1696772525951:find-customer 4
+1696772528432:find-customers
+1696772541724:find-customers -v true
+1697890951129:find-customer 1
+1697891773843:find-customer 2
+1697895855673:find-customers
+1697895924233:find-customers -v true
+1697896603111:find-customer 2
+1697900356251:find-customer 22
+1697900358408:find-customer 1
+1697900360281:find-customer 3
+1697900362216:find-customers
+1697900369388:find-customers -v false
+1697900385268:find-customers -n "name 4"
+1697900413353:find-customer 2
+1697900426255:find-customers -n "name 3"
+1697900434457:find-customer 4
+1697902043694:find-customer 44
+1697902046071:shell(administrator1):>
+1697902054160:find-customer 11
+1697902057045:find-customer 3
+1697903234300:find-customer 2
+1697903236732:find-customer 1
+1697903258643:delete-customer 2
+1697907382636:find-customer 1
+1697907388710:delete-customer 2
+1697907440932:find-customer 3
+1697907967279:find-customer 4
+1697908104435:find-customer 1
+1697908115130:find-customer 2
+1697908124447:find-customer 3
+1697909308954:find-customer 33
+1697909311851:find-customer 44
+1697909313922:find-customer 55
+1697909344611:find-customer 1
+1697909353576:find-customer 11
+1697909359441:find-customer 1
+1697909364227:find-customer 22
+1697909373825:find-customer 21
+1697910012969:find-customer 22
+1697920469267:ind-customer 2
+1697920479467:find-customer 2
+1697920481260:find-customer 22
+1697920482969:find-customer 21
+1697920484987:find-customer 26
+1697920543042:find-customer 1
+1697920545075:find-customer 2
+1697920547282:find-customer 3
+1697920549354:find-customer 11
+1697920550220:shell(administrator1):>
+1697920559786:find-customer 30
+1697920567458:find-customer 8
+1697924066566:find-customer 4
+1697924069125:find-customer 3
+1697924071900:find-customers
+1697924080983:find-customers -v true
+1697925194645:find-customer 9
+1697925202331:find-customer 11
+1697925206539:find-customer 40
+1697925258436:update-customer 3
+1697925261020:sdsfdsf
+1697925273187:dfsdfd@mail.com
+1697925282453:04/05/1960
+1697925285682:dfds fsd fdsfdsfdsfsd
+1697925289306:Y
+1697925326492:delete-customer 1
+1697925344907:delete-customer 11
+1697927064434:find-customer 1
+1697927070169:find-customer 11
+1697927071913:find-customer 2
+1697927073816:find-customers
+1697927078240:find-customers -v true
+1697972503393:find-customers -v false
+1697972505933:find-customers
+1697972517173:find-customer 1
+1697972519253:find-customer 11
+1697972521222:find-customer2
+1697972523309:find-customer 2
+1697972525256:find-customer 3
+1697972527342:find-customer 4
+1697972532453:delete-customer 6
+1697972538465:delete-customer 7
+1697972545429:update-customer 8
+1697972549835:Joe Long
+1697972557309:joe@gmail.com
+1697972562269:10/05/2008
+1697972570003:fd dsjgkdfgfdghfd gfh hjhfxcv\\
+1697972571675:N
+1697972587191:update-customer 3
+1697972592699:Lisa Simpson
+1697972598669:lisa@gmail.com
+1697972603762:04/05/1999
+1697972605600:dfdf dsfdsfsdfdsf
+1697972607100:Y
+1697972644542:find-customers
+1697972663486:find-customers -n "Joe"
+1697972682259:find-customers -n "Lis"
+1697972771358:find-customers -n "Lissdsds"
+1697972778184:find-customers -v true
+1697973247846:find-customer 1
+1697973252996:find-customer 2
+1697973254837:find-customer 3
+1697973256762:find-customer 4
+1697973258621:find-customer 5
+1697973259860:find-customer 1
+1697973262445:find-customer 13
+1697973269011:delete-customer 8
+1697973275548:delete-customer 9
+1697973277910:delete-customer 84444
+1697973281781:delete-customer 888
+1697973290559:update-customer 9
+1697973300477:update-customer 910
+1697973305406:update-customer 7
+1697973308458:Joe
+1697973314972:joe@mail.com
+1697973321372:12/05/1996
+1697973323364:dsfds dfdsfgfdfdgfd
+1697973324595:Y
+1697973377819:find-customers
+1697973389149:find-customers -v true
+1697973392757:find-customers -v false
+1697973402128:find-customers -n "Joe"
+1697973405909:find-customers -n "Lisa"
+1697973440652:find-customers -n "Joe"
+1697973453761:find-customers -v true -s ACTIVATED
+1697973504027:find-customers -n "name" -s ACTIVATED
+1697973522788:find-customers -s ACTIVATED
+1697973531844:find-customers -v true -s DEACTIVATED
